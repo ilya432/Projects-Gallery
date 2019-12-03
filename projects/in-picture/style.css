@@ -1,0 +1,18 @@
+body,html{height:100%; width: 100%; overflow-x: hidden;overflow-y: hidden;}
+
+#questionsContainer{height: 400px; width: 600px; background-color: lightcoral; 
+    text-align: center; margin:100px auto auto auto; padding: 50px 0 0 0; font-size: 50px;}
+
+.question{height: 80%; width: auto; }
+.questionImg{height: inherit; width: auto;}
+
+.options{text-align: center; }
+.optParagraph{ margin:5px auto 5px auto;
+    height: 50px; width: 300px; 
+    border-top-left-radius: 15%; 
+    border-top-right-radius: 15%; 
+    border-bottom-left-radius: 15%; 
+    border-bottom-right-radius: 15%; 
+    font-size: 20px; color: deepskyblue; line-height: 50px;
+    background-color:darkorchid;}
+.hidden{display:none;}

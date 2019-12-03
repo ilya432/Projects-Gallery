@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/todos.css" />
+    <link rel="stylesheet" href="./css/flipAnimation.css" />
+    <link rel="stylesheet" href="./css/mediaQ.css" />
+    <title>Document</title>
+  </head>
+
+  <body onload="init()">
+    <div class="container">
+      <div class="containerTop">
+        <div class="addTodo">
+          <span id="todo-title" contenteditable="true"></span>
+          <button class="addBtn" onclick="onAddClick()">Add</button>
+          <div class="importance">
+            <img
+              src="./img/importance/low.png"
+              alt="Not urgent"
+              onclick="onImportanceToggle(this)"
+            />
+            <img
+              src="./img/importance/important.png"
+              alt="Important"
+              onclick="onImportanceToggle(this)"
+            />
+            <img
+              src="./img/importance/urgent.png"
+              alt="Urgent"
+              onclick="onImportanceToggle(this)"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="todosContainer">
+        <div class="todoControls">
+          <div class="filterTodosContainer">
+            <div class="filterBy">
+              <div class="filterByText" onclick="onStatusButtonmClicked(this)">
+                all
+              </div>
+              <div
+                class="filterByCreated"
+                onclick="onStatusButtonmClicked(this)"
+              >
+                active
+              </div>
+              <div
+                class="filterByImportance"
+                onclick="onStatusButtonmClicked(this)"
+              >
+                done
+              </div>
+            </div>
+
+            <span>sort by: </span>
+            <select id="sortBy-filter" onchange="onSortByParamChange(this)">
+              <span class="sortBySpan">Sort by</span>
+              <option value="text">Text</option>
+              <option value="created">Created</option>
+              <option value="importance">Importance</option>
+            </select>
+          </div>
+          <div class="status">
+            <span id="total-todos">-</span>
+            <span id="active-todos">-</span>
+          </div>
+        </div>
+        <ul class="todos"></ul>
+      </div>
+
+      <div class="confirmWrapper">
+        <div class="confirmDelDiv">
+          <span class="confirmDelText">Are you sure?</span>
+          <button class="confirmDelBtn-Yes">Yes</button>
+          <button class="confirmDelBtn-No">Oops</button>
+        </div>
+      </div>
+    </div>
+    <script src="./js/storageService.js"></script>
+    <script src="./js/todosService.js"></script>
+    <script src="./js/todosController.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/test.js"></script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+body{text-align: center; margin: 0; padding: 0;}
+ul{list-style-type: none; margin: 0; padding: 0;}
+
+ /* commons */
+.container, .todosContainer, .todos, .todo{border-radius: 2em;}
+
+.container{ display: flex; flex-flow: column; margin: 20px 25% 0 25%; padding: 10px; align-items: flex-start; align-items: center;}
+
+.containerTop{display: flex; flex-grow: 1; flex-flow: row ; order: 1;}
+.addTodo{display: flex; width: 50vmin; flex-direction: column; height: auto; }
+#todo-title{height:auto; min-height: 50px; background-color: rgb(219, 211, 211); border-radius: 1em; border: 1px dashed grey;}
+.addBtn{width:50%; align-self: center; max-width: 200px; border: solid 1px black; }
+
+.todosContainer{display: flex; padding: 20px; flex-grow: 10; align-items: center; flex-flow: column; order: 2;  background: rgb(76, 121, 158);}
+.filterTodosContainer{ flex-direction: row; order: 2; padding: 10px; color: ivory; font-size: 20px;}
+.status{justify-items: start; padding: 5px; color: ivory;}
+
+#total-todos, #active-todos{margin: 0 15px 0 0;}
+.todoControls{display: flex; flex-grow: 1; flex-flow: column ; order: 1;}
+.importance img{ height: 60px; width:auto; margin: 10px 10px 0 0;}
+.todos{
+    width: 100%; 
+    background-color: antiquewhite;
+    font-family: arial;
+    display: flex;flex-direction: column;
+    text-align: center;
+    min-height: 30px; 
+    /* width: 100%; */
+    /* margin: 0 auto; */
+    padding: 10px; flex-grow: 1; order: 3;
+}
+.todo{width:inherit; display:flex; flex-grow: 1;  flex-flow: column; background-color: rgb(179, 215, 245); }
+
+.todoTopDiv, .todoBottomDiv{  word-wrap: break-word; border: 1px solid rgb(110, 40, 40);}
+.todoTopDiv{flex-direction: column; flex: 1 1; border-radius: 2em 2em 0 0;  background-color: rgb(161, 199, 130); }
+
+.todoBottomDiv{display: flex; flex-flow: row ; flex-grow: 1; border-radius: 0 0 2em 2em; background-color: rgb(94, 182, 148); }/*flex: 3 3;*/
+.todoText{width:80vmin; height: 100h; justify-content: flex-start; flex-grow: 4; color: indigo; margin: 5px; order: 1; line-height: 2; text-align: left;} /*justify-content: left;*/
+
+.todoBottomDivButtons{display:flex; justify-content:space-around; flex-flow: column;  order: 2; flex-grow: 1; margin: 5px 0 0 0;}
+.moveUpBtn, .moveDownBtn, .importanceImg{width:30px; height:30px; margin: 0 0 15px 0; align-self: center;}
+.importanceImg{ width:50px; height:50px; }
+/* .importanceSpan{justify-content: start;} */
+.moveUpBtn, .moveDownBtn{text-decoration: none; cursor: pointer; border-radius: 25%;}
+/* .moveDownBtn{} */
+
+.done{ text-decoration: line-through;
+} .done span{ text-decoration: none;}
+
+.delete{ float: right; margin-right: 15px; cursor: pointer;
+}.confirmWrapper{
+display: none;
+}.confirmDelDiv{display:flex; flex-flow: row wrap;
+    text-align: center; justify-content: space-around;
+    background-color: rgb(76, 121, 158); height:200px; width:200px; 
+    position: absolute; border: 1px black dashed;
+}.confirmDelText{ color:rgb(230, 235, 204); font-size: 20px; margin: 30px 0 0 20px;
+}.confirmDelBtn-Yes, .confirmDelBtn-No{height:40px; width:70px;}
+
+.focus{border: 1px solid red;}
+.low{color: rgb(9, 129, 35);}
+.important{color: orange;}
+.urgent{color: red;}
+
+.filterBy{flex-flow: row; display: flex; padding: 10px;}
+.filterByText, .filterByCreated, .filterByImportance{ 
+    width:55px; height: 30px; border-radius: 2em; border: 1px black solid;
+    justify-content: space-around; flex-grow: 1; margin: 0 5px 0 0;
+    background: slategray; cursor: pointer;}
+.vaultTec{position: absolute; bottom:0;}

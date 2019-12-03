@@ -13,9 +13,9 @@ function loadPortfolioItems() {
     console.log(gPortfolioItems);
 }
 function createPortfolioItems() {
-    gPortfolioItems.push(createPortfolioItem('InPicture', 'In picture', 'work work work', './img/portfolio/inPicture.png', 'loooooooong', './projects/in-picture/index.html'))
-    gPortfolioItems.push(createPortfolioItem('Minesweeper', 'Minesweeper', 'work work work', './img/portfolio/minesweeper.png', 'loooooooong', './projects/mineSweeper/index.html'))
-    gPortfolioItems.push(createPortfolioItem('Todos', 'Todos', 'work work work', './img/portfolio/Todos.png', 'loooooooong', './projects/todos/index.html'))
+    gPortfolioItems.push(createPortfolioItem('InPicture', 'In picture', 'Changing questions with pictures', './img/portfolio/inPicture.png', 'A small survey with changing pictures and optional answers', './projects/in-picture/index.html'))
+    gPortfolioItems.push(createPortfolioItem('Minesweeper', 'The minesweeper game', './img/portfolio/minesweeper.png', 'A minesweeper game - clear cells & avoid bombs', './projects/mineSweeper/index.html'))
+    gPortfolioItems.push(createPortfolioItem('Todos', 'Todos', 'Keep your TODOs in order', './ img / portfolio / Todos.png', 'A place to put your TODO notes', './ projects / todos / index.html'))
     savePortfolioItems();
 }
 function createPortfolioItem(id, title, description, imgSrc, longDescription, url) {
